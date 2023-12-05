@@ -21,71 +21,69 @@ class _HomeScreenState extends State<HomeScreen> {
           bottom: PreferredSize(
             preferredSize: Size.fromHeight(40.0),
             child: TabBar(
-              labelPadding: EdgeInsets.symmetric(horizontal: 8.0),
-              tabs: [
-                Tab(
-                  child: Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.home, color: Colors.black),
-                        SizedBox(
-                            width: 8), // Add spacing between icon and ColorTab
-                        ColorTab(color: Colors.red),
-                      ],
+                labelPadding: EdgeInsets.symmetric(horizontal: 8.0),
+                tabs: [
+                  Tab(
+                    child: Center(
+                      child: ColorTab(
+                        color: Colors.red,
+                        width: 80,
+                        height: 80,
+                        icon: Icon(Icons.home, color: Colors.black),
+                        child:
+                            Text('Home', style: TextStyle(color: Colors.black)),
+                      ),
                     ),
                   ),
-                ),
-                Tab(
-                  child: Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.notifications, color: Colors.black),
-                        SizedBox(width: 8),
-                        ColorTab(color: Colors.green),
-                      ],
+                  Tab(
+                    child: Center(
+                      child: ColorTab(
+                        color: Colors.green,
+                        width: 80,
+                        height: 80,
+                        icon: Icon(Icons.notifications, color: Colors.black),
+                        child: Text('Notification',
+                            style: TextStyle(color: Colors.black)),
+                      ),
                     ),
                   ),
-                ),
-                Tab(
-                  child: Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.map, color: Colors.black),
-                        SizedBox(width: 8),
-                        ColorTab(color: Colors.blue),
-                      ],
+                  Tab(
+                    child: Center(
+                      child: ColorTab(
+                        color: Colors.blueGrey,
+                        width: 80,
+                        height: 80,
+                        icon: Icon(Icons.map, color: Colors.black),
+                        child: Text('Location',
+                            style: TextStyle(color: Colors.black)),
+                      ),
                     ),
                   ),
-                ),
-                Tab(
-                  child: Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.people, color: Colors.black),
-                        SizedBox(width: 8),
-                        ColorTab(color: Colors.yellow),
-                      ],
+                  Tab(
+                    child: Center(
+                      child: ColorTab(
+                        color: Colors.yellow,
+                        width: 80,
+                        height: 80,
+                        icon: Icon(Icons.people, color: Colors.black),
+                        child: Text('Friends',
+                            style: TextStyle(color: Colors.black)),
+                      ),
                     ),
                   ),
-                ),
-                Tab(
-                  child: Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.phone, color: Colors.black),
-                        SizedBox(width: 8),
-                        ColorTab(color: Colors.orange),
-                      ],
+                  Tab(
+                    child: Center(
+                      child: ColorTab(
+                        color: Colors.orange,
+                        width: 80,
+                        height: 80,
+                        icon: Icon(Icons.phone, color: Colors.black),
+                        child: Text('Contact',
+                            style: TextStyle(color: Colors.black)),
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
+                ]),
           ),
         ),
         body: TabBarView(
@@ -97,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white))),
+                          color: Colors.black))),
             ),
             ColoredBox(
               color: Colors.green,
@@ -106,10 +104,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white))),
+                          color: Colors.black))),
             ),
             ColoredBox(
-              color: Colors.blue,
+              color: Colors.blueGrey,
               child: Center(
                   child: Text('3rd part',
                       style: TextStyle(
@@ -124,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white))),
+                          color: Colors.black))),
             ),
             ColoredBox(
               color: Colors.orange,
@@ -133,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white))),
+                          color: Colors.black))),
             ),
           ],
         ),
